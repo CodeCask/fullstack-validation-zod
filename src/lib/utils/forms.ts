@@ -32,6 +32,6 @@ export async function applyFormErrorResponse(error: unknown) {
 		throw new Error('Unexpected response');
 	}
 
-	const actionResult = (await error.response.json()) as ActionResult;
+	const actionResult = await error.response.json();
 	return applyAction(actionResult);
 }
