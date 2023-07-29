@@ -1,5 +1,4 @@
 import { applyAction, deserialize } from '$app/forms';
-import type { ActionResult } from '@sveltejs/kit';
 import { FelteSubmitError } from 'felte';
 
 /**
@@ -22,7 +21,7 @@ export async function applyFormSuccessResponse(response: unknown) {
 }
 
 /**
- * Can be used as a handler for felte's `onSubmit` prop when used with form actions.
+ * Can be used as a handler for felte's `onError` prop when used with form actions.
  *
  * @param response
  * @returns
