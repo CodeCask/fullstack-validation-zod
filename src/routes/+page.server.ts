@@ -16,6 +16,6 @@ export const actions = {
 		const service = new AccountService(locals.accountId);
 		await service.updateEmail(validatedSchema.data.email);
 
-		throw redirect(307, '/success');
+		redirect(307, '/success');
 	}
 };
